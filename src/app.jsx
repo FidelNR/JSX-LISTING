@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "./app.css"
 function App() {
   const [books, setBooks] = useState("");
 
@@ -49,12 +49,12 @@ function App() {
       {/* Write your code here */}
 
       {books && books.map(book => (
-      <div key={book.id}>
-        <h2>{book.title}</h2>
-        <p>Authors: {book.authors.join(", ")}</p>
-        <p>Editorial: {book.editorial}</p>
+      <div key={book.id} className="general">
         <img src={book.cover} alt={book.title} />
-        <hr />
+        <div className="textos">
+          <h2>{book.title}</h2>
+          <p>{book.authors.join(", ")}</p>
+        </div>
       </div>
     ))}
 
