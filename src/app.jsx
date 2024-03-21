@@ -37,10 +37,14 @@ function App() {
     console.log(books);
   }
 
+  function handleRemoveClick() {
+    setBooks(undefined);
+  }
+
   return (
     <>
       <button onClick={handleClick}>Populate books variable</button>
-      <button onClick={() => setBooks(undefined)}>Remove books variable</button>
+      <button onClick={handleRemoveClick}>Remove books variable</button>
       
       {/* Write your code here */}
 
